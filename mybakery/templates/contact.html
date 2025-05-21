@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--  Contact Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+ 
+      
+      <!--  Contact Section -->
+      
+      <form method="post" action="">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+          {{ form.name.label_tag }}
+          {{ form.name }}
+        </div>
+        
+        <div class="mb-3">
+          {{ form.email.label_tag }}
+          {{ form.email }}
+        </div>
+        
+        <div class="mb-3">
+          {{ form.message.label_tag }}
+          {{ form.message }}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      
+      
+      
+    
+    </div>
+  </section>
+  
+
+
+{% endblock %}

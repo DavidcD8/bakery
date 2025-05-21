@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Menu</h2>
+
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Item</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for menu in menu_items %}
+            <tr>
+              <td style="width: 100px;">
+                <img src="{{ menu.product.image.url }}" class="img-fluid rounded" style="max-height: 80px;" alt="{{ menu.product.name }}">
+              </td>
+              <td><strong>{{ menu.product.name }}</strong></td>
+              <td>{{ menu.product.description }}</td>
+              <td>€{{ menu.product.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

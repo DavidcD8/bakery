@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--  About Section -->
+<section id="about" class="py-5" style="background-color: #f5f0e6;"> <!-- light beige background -->
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Left: Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="{% static 'images/storefront.png' %}" alt="Bakery Storefront" class="img-fluid rounded shadow">
+        </div>
+        
+        <!-- Right: Text -->
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p class="lead">
+            We’re a family-run bakery passionate about sourdough and local ingredients, proudly serving the Cork community since 1998.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Cork Bakery Landing Page{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&family=Quicksand:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS (placed inside <head>) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Optional: Your custom CSS -->
+  {% block extra_css %}
+  <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+  {% endblock %}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">Cork Bakery</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1" style="padding-top: 70px;">
+    {% block content %}
+    <!-- Your page-specific content will go here -->
+    {% endblock %}
+  </main>
+
+  <footer class="bg-light text-center text-muted py-4 mt-auto">
+    <div class="container">
+      <h5 class="text-dark mb-3">Cork Bakery</h5>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons mb-3">
+        <a href="https://www.facebook.com/CorkBakery" target="_blank" class="text-dark mx-2" aria-label="Facebook">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://twitter.com/CorkBakery" target="_blank" class="text-dark mx-2" aria-label="Twitter">
+          <i class="fab fa-twitter fa-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/CorkBakery" target="_blank" class="text-dark mx-2" aria-label="Instagram">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+      </div>
+      
+
+      <!-- Contact Info -->
+      <p class="mb-1">&copy; 2023 Cork Bakery. All rights reserved.</p>
+      <p class="mb-0">Phone: (123) 456-7890 | Email: info@corkbakery.com</p>
+    </div>
+  </footer>
+  
+
+  <!-- Bootstrap JS Bundle (includes Popper), placed at the end for better page load -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  {% block extra_js %}
+  <!-- Additional JS scripts can go here -->
+  {% endblock %}
+
+</body>
+</html>
