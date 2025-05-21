@@ -15,27 +15,27 @@ A simple and elegant Django-based web application to showcase a bakery’s menu.
 - **Image Upload**: Upload product images to visually enhance the menu.
 
 ---
-
+ 
 ## Screenshots
 
 ### Homepage Preview
-![Homepage](Bakery\staticfiles\images\hero.png)
+![Homepage](staticfiles/images/hero.png)
 
 ### Full Menu Page
-![Menu Page](Bakery\staticfiles\images\menu.png)
+![Menu Page](staticfiles/images/menu.png)
 
-### highlight
-![Menu Page](Bakery\staticfiles\images\highlight.png)
+### Highlight
+![Highlight](staticfiles/images/highlight.png)
 
-### Hour&map
-![Menu Page](Bakery\staticfiles\images\hour&map.png)
+### Hour & Map
+![Hour & Map](staticfiles/images/hour&map.png)
 
 ### About
-![Menu Page](Bakery\staticfiles\images\about.png)
-
+![About](staticfiles/images/about.png)
 
 ### Contact
-![Menu Page](Bakery\staticfiles\images\contact.png)
+![Contact](staticfiles/images/contact.png)
+
 
 ---
 
